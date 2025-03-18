@@ -55,8 +55,8 @@ input {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   outline: none;
-  border: 1px solid var(--border-color);
 }
+
 input:focus {
   margin: 0;
   border-width: 2px;
@@ -65,7 +65,7 @@ input:focus {
 
 .error-message {
   color: var(--error-text-color);
-  margin-top: var(--word-space-popup-margin);
+  margin-top: var(--word-space);
   margin-bottom: 0;
 }
 
