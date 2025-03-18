@@ -1,0 +1,85 @@
+:root {
+  --default-popup-margin: 16px;
+  --popup-width: 300px;
+ 
+  --line-height: 1.6666;
+
+  --element-padding: 3px 12px;
+  --border-radius: 6px;
+  --word-space: .25rem;
+
+  --popup-bg-color: #0d1117;
+  --input-bg-color: #161b22;
+  --input-focus-border-bg-color: #1f6feb;
+  --button-bg-color: #1f6feb;
+  --error-text-color: #f85149;
+  --border-color: #30363d;
+  --font-color: #e6edf3;
+}
+
+* {
+  line-height: var(--line-height);
+}
+
+body {
+  width: var(--popup-width);
+  padding: var(--default-popup-margin);
+  
+  background-color: var(--popup-bg-color);
+  color: var(--font-color);
+  border-radius: var(--border-radius);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  
+  margin-bottom: var(--default-popup-margin);
+}
+
+.input-wrapper > label {
+  margin-bottom: var(--word-space);
+}
+
+input {
+  margin: 1px; /* Compensates focus wider border */
+  padding: var(--element-padding);
+  box-sizing: border-box;
+
+  background-color: var(--input-bg-color);
+  color: inherit;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  outline: none;
+  border: 1px solid var(--border-color);
+}
+input:focus {
+  margin: 0;
+  border-width: 2px;
+  border-color: var(--input-focus-border-bg-color);
+}
+
+.error-message {
+  color: var(--error-text-color);
+  margin-top: var(--word-space-popup-margin);
+  margin-bottom: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  padding: var(--element-padding);
+  border: none;
+
+  color:inherit;
+  border-radius: var(--border-radius);
+  outline: none;
+  cursor: pointer;
+  background-color: var(--button-bg-color);
+}

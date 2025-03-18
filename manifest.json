@@ -1,0 +1,25 @@
+{
+  "name": "GitHub PR files checker",
+  "description": "Tool for marking certain files as \"viewed\".",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "./favicons/favicon-dark.png"
+  },
+  "background": {
+    "service_worker":"./scripts/service-worker/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["./scripts/content-scripts/checker.js"],
+      "matches": ["https://*github*/*"],
+      "runAt": "document_start"
+    }
+  ],
+  "permissions": [
+    "scripting",
+    "tabs",
+    "activeTab"
+  ]
+}
