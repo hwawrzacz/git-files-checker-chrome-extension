@@ -27,6 +27,18 @@ Ta-dam!
 Search is based on simple querySelector. Yes, I manually inspected GitHub's structure, and created a selector for file section, and viewed toggle. 
 At some point I expect it to stop working, since GitHub might change DOM strucutre, but it is also easy to adjust.
 
+## Installation
+
+To get it running:
+
+1. Go to Chrome extensions settinggs (chrome://extensions).
+2. Enable developer mode (top-right corner).
+
+   ![image](https://github.com/user-attachments/assets/89787672-e38d-4066-a9d3-b8616f724469)
+3. Load unpacked.
+   
+   ![image](https://github.com/user-attachments/assets/7c966ac2-b563-463e-a931-b2dca2c1a4b4)
+
 ## Non-interective demo
 ![image](https://github.com/user-attachments/assets/77bd9ef7-9d82-499e-8806-9ea72473ac2c)
 
