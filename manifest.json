@@ -13,8 +13,7 @@
   "content_scripts": [
     {
       "js": ["./scripts/content-scripts/checker.js"],
-      "matches": ["https://*github*/*"],
-      "runAt": "document_start"
+      "matches": ["https://*/*"]
     }
   ],
   "permissions": [
