@@ -4,20 +4,19 @@
   "version": "1.0",
   "manifest_version": 3,
   "action": {
-    "default_popup": "index.html",
+    "default_popup": "./popup/index.html",
     "default_icon": "./favicons/favicon-dark.png"
   },
   "background": {
-    "service_worker":"./scripts/service-worker/service-worker.js"
+    "service_worker":"./service-worker/service-worker.js"
   },
   "content_scripts": [
     {
-      "js": ["./scripts/content-scripts/checker.js"],
+      "js": ["./content-scripts/checker.js"],
       "matches": ["https://*/*"]
     }
   ],
   "permissions": [
-    "scripting",
     "tabs",
     "activeTab"
   ]

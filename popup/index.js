@@ -1,6 +1,6 @@
-import { DomManipulator } from './dom-manipulator.js'
-import { InputHandler } from  './input-handler.js'
-import { Messages } from  '../messages/messages.js'
+import { DomManipulator } from '../scripts/dom-manipulator.js'
+import { InputHandler } from '../scripts/input-handler.js'
+import { Messages } from '../scripts/messages.js'
 
 const domManipulator = new DomManipulator()
 const inputHandler = new InputHandler()
