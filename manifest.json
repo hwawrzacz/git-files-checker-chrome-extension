@@ -12,9 +12,5 @@
       "js": ["./content-scripts/checker.js"],
       "matches": ["https://*/*"]
     }
-  ],
-  "permissions": [
-    "tabs",
-    "activeTab"
   ]
 }
