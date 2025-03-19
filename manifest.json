@@ -7,9 +7,6 @@
     "default_popup": "./popup/index.html",
     "default_icon": "./favicons/icon-transparent-64.png"
   },
-  "background": {
-    "service_worker":"./service-worker/service-worker.js"
-  },
   "content_scripts": [
     {
       "js": ["./content-scripts/checker.js"],

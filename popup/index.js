@@ -43,7 +43,21 @@ function getPhrasesAndSendCheckFilesNotification() {
  */
 function sendCheckFilesNotification(searchPhrases) {
   const message = Messages.createCheckCheckboxesMessage(searchPhrases)
+  sendMessage(message);
+}
 
-  chrome.runtime.sendMessage(message)
-  console.log('[Extension Popup] Notification sent', message)
+/** @return {Promise} */
+async function sendMessage(message) {
+  const tab = await getCurrentTab()
+  return chrome.tabs.sendMessage(tab.id, message).then(() =>
+      console.log('[Extension Popup] Message sent to tab', {tabId: tab.id, message}))
+}
+
+/** @return {Promise} */
+async function getCurrentTab() {
+  const currentWindow = await chrome.windows.getCurrent();
+  const queryOptions = { active: true, windowId: currentWindow?.id };
+  const tabs = await chrome.tabs.query(queryOptions);
+
+  return tabs[0];
 }
