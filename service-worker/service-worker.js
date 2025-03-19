@@ -18,8 +18,9 @@ async function handleCheckCheckboxesMessage(message) {
 
 /** @return {Promise} */
 async function getCurrentTab() {
-  let queryOptions = { active: true };
-  let tabs = await chrome.tabs.query(queryOptions);
+  const currentWindow = await chrome.windows.getCurrent();
+  const queryOptions = { active: true, windowId: currentWindow?.id };
+  const tabs = await chrome.tabs.query(queryOptions);
 
   return tabs[0];
 }
